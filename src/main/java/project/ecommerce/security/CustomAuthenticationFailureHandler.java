@@ -20,7 +20,7 @@ public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationF
         System.out.println(exception.getMessage());
         super.onAuthenticationFailure(request, response, exception);
 
-        String errorMessage = "mote de pass ou email invalide !";
+        String errorMessage = "Token bulunamadı!";
 
         request.getSession().setAttribute(WebAttributes.AUTHENTICATION_EXCEPTION, errorMessage);
     }
